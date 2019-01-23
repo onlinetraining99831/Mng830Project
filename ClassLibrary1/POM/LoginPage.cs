@@ -9,12 +9,12 @@ using System.Threading.Tasks;
 
 namespace ClassLibrary1.POM
 {
-    public class LoginPage
+    public class LoginPage : Basepage
     {
         IWebDriver driver; // global variable.
         Dictionary<string, string> credentials;
 
-        public LoginPage(IWebDriver driver) // local variable.
+        public LoginPage(IWebDriver driver) : base(driver) // local variable.
         {
             this.driver = driver;
             PageFactory.InitElements(driver, this);

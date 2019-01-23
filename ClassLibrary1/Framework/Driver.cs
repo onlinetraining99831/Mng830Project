@@ -42,6 +42,7 @@ namespace ClassLibrary1.Framework
                     throw new Exception(browsertype + " is not supported yet, execution terminated");
                    
             }
+            _driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
         }
 
         public static string getappurl()
@@ -52,6 +53,11 @@ namespace ClassLibrary1.Framework
         public static void launchapp()
         {
             _driver.Navigate().GoToUrl(getappurl());
+        }
+
+        public static void close_browser()
+        {
+            _driver.Close();
         }
 
     }

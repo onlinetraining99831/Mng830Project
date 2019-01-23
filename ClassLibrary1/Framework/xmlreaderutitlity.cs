@@ -11,8 +11,8 @@ namespace ClassLibrary1.Framework
 {
     public class xmlreaderutitlity
     {
-        static string projectdllpath = Assembly.GetExecutingAssembly().Location;
-        static string projectpath = Path.GetDirectoryName(Path.GetDirectoryName(Path.GetDirectoryName(projectdllpath)));
+        public static string projectdllpath = Assembly.GetExecutingAssembly().Location;
+        public static string projectpath = Path.GetDirectoryName(Path.GetDirectoryName(Path.GetDirectoryName(projectdllpath)));
 
         public static Dictionary<string,string> getcredentials(string filename, string usertype)
         {
